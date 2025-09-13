@@ -30,7 +30,7 @@ d.head.appendChild(s);
 "@context": "https://schema.org",
 "@type": "PetService",
 "name": "Chey Walks",
-"url": "https://cheyennewh.github.io/YOUR_REPO/",
+"url": "https://cheyennewh.github.io/dog_page/",
 "areaServed": "New York City",
 "priceRange": "$",
 "serviceType": ["Dog walking", "Pet sitting"],
