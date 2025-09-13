@@ -1,6 +1,0 @@
-@font-face {
-  font-family: 'Glitchcrafty';
-  src: url('/dog_page/assets/fonts/Glitchcrafty-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
