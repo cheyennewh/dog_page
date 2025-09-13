@@ -1,0 +1,29 @@
+/* === Custom Font === */
+@font-face {
+  font-family: 'Glitchcrafty';
+  src: url('assets/fonts/Glitchcrafty-lgo4V.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* === Techy Body Font (Google Fonts) === */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap');
+
+/* Base styles */
+body {
+  font-family: 'Fira Sans', system-ui, sans-serif;
+  color: #1f2937; /* slate-800 */
+  background: #fdfdfc;
+  margin: 0;
+}
+
+/* Headings use Glitchcrafty */
+h1, h2, h3, .title-font {
+  font-family: 'Glitchcrafty', cursive;
+}
+
+/* Optional: smooth edges for custom font */
+h1, h2, h3 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
