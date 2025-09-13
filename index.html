@@ -3,159 +3,99 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chey Walks — Dog Walking & Sitting</title>
-  <meta name="description" content="Reliable dog walking and sitting in your neighborhood. Transparent pricing, easy online booking, and calendar availability." />
-  <!-- Tailwind CSS (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Icons -->
+  <title>Chey Walks — About</title>
+  <meta name="description" content="About Chey Walks — caring, reliable dog walking & pet sitting in NYC." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root { --brand: #0f766e; }
-    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
-    .shadow-soft { box-shadow: 0 10px 35px rgba(0,0,0,0.07); }
+    :root{
+      --ink:#1f2937;         /* slate-800 */
+      --accent:#3b82f6;      /* blue-500 */
+      --wash-1:#f0f6ff;      /* pale wash */
+      --wash-2:#fef3f2;      /* blush */
+      --wash-3:#f2fdf7;      /* mint */
+      --paper:#fffdf7;       /* warm paper */
+    }
+    body{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--ink); }
+    .script{ font-family: 'Dancing Script', cursive; }
+    /* watercolor background using layered radial-gradients */
+    .watercolor {
+      background:
+        radial-gradient(1200px 600px at 10% 20%, rgba(59,130,246,0.09), transparent 60%),
+        radial-gradient(900px 500px at 85% 30%, rgba(244,63,94,0.08), transparent 60%),
+        radial-gradient(900px 600px at 20% 85%, rgba(16,185,129,0.08), transparent 60%),
+        linear-gradient(180deg, #ffffff, var(--wash-1) 60%, #ffffff 100%);
+    }
+    /* subtle paper grain */
+    .paper {
+      background: var(--paper);
+      position: relative;
+      overflow: hidden;
+    }
+    .paper:before{
+      content:""; position:absolute; inset:0; pointer-events:none;
+      background: repeating-linear-gradient(0deg, rgba(0,0,0,0.015), rgba(0,0,0,0.015) 1px, transparent 2px, transparent 4px);
+      mix-blend-mode:multiply; opacity:.6;
+    }
+    .ink-underline { text-decoration: underline wavy; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+    .card{ border-radius: 1.25rem; border:1px solid rgba(30,41,59,.12); box-shadow: 0 10px 35px rgba(0,0,0,.06); }
+    a:hover{ opacity:.95 }
   </style>
-  <!-- Calendly embed -->
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <!-- JSON-LD for SEO (PetService) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "PetService",
-    "name": "Chey Walks",
-    "url": "https://cheyennewh.github.io/dog_page/",
-    "areaServed": "New York City",
-    "priceRange": "$$",
-    "serviceType": ["Dog walking", "Pet sitting"],
-    "sameAs": ["https://instagram.com/cwakeland1218"],
-    "telephone": "+1-555-123-4567"
-  }
-  </script>
 </head>
-<body class="bg-slate-50 text-slate-800">
-  <!-- Header -->
-  <header class="bg-white/70 backdrop-blur sticky top-0 z-50 border-b border-slate-200">
+<body class="watercolor min-h-screen">
+  <header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#" class="font-extrabold text-lg tracking-tight text-slate-900">🐾 Chey Walks</a>
-      <nav class="hidden md:flex gap-6 text-sm">
-        <a href="#services" class="hover:text-emerald-700">Services</a>
-        <a href="#booking" class="hover:text-emerald-700">Booking</a>
-        <a href="#faq" class="hover:text-emerald-700">FAQ</a>
-        <a href="#contact" class="hover:text-emerald-700">Contact</a>
+      <a class="script text-2xl" href="/dog_page/">Chey Walks</a>
+      <nav class="flex gap-6 text-sm">
+        <a href="/dog_page/" class="hover:text-blue-700">About</a>
+        <a href="/dog_page/rates.html" class="hover:text-blue-700">Rates & Services</a>
+        <a href="/dog_page/book.html" class="hover:text-blue-700">Booking & Contact</a>
       </nav>
-      <a href="#booking" class="px-3 py-2 rounded-xl bg-emerald-700 text-white text-sm font-semibold shadow-soft hover:bg-emerald-800">Book now</a>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Reliable <span class="text-emerald-700">dog walking</span> & pet sitting</h1>
-        <p class="mt-4 text-lg text-slate-600">Flexible, fear‑free handling. Real‑time updates. Easy online booking synced to my live calendar.</p>
-        <div class="mt-6 flex gap-3">
-          <a href="#booking" class="px-5 py-3 rounded-2xl bg-emerald-700 text-white font-semibold shadow-soft hover:bg-emerald-800">See availability</a>
-          <a href="#services" class="px-5 py-3 rounded-2xl bg-white text-slate-900 font-semibold border border-slate-200 hover:border-slate-300">View services</a>
-        </div>
-        <ul class="mt-6 text-slate-600 text-sm list-disc list-inside">
-          <li>Insured & background checked</li>
-          <li>Neighborhood coverage: Upper Manhattan & nearby</li>
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    <section class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="card paper p-8 relative">
+        <h1 class="script text-5xl leading-tight">Hi, I’m Chey.</h1>
+        <p class="mt-4 text-slate-700">I’m a patient, fear‑free dog walker and pet sitter serving Upper Manhattan and nearby neighborhoods. I send photo updates, respect routines, and focus on calm, enriching walks tailored to your pup.</p>
+        <ul class="mt-6 text-slate-700 list-disc list-inside">
+          <li>Insured & background‑checked</li>
           <li>Multi‑pet friendly</li>
+          <li>Puppy & senior‑dog experience</li>
         </ul>
+        <div class="mt-6 flex gap-3">
+          <a href="/dog_page/rates.html" class="px-5 py-3 rounded-2xl bg-blue-600 text-white font-semibold">See rates</a>
+          <a href="/dog_page/book.html" class="px-5 py-3 rounded-2xl bg-white border border-slate-200 font-semibold">Book now</a>
+        </div>
       </div>
-      <div class="relative">
-        <div class="aspect-[4/3] rounded-3xl bg-white shadow-soft border border-slate-200 flex items-center justify-center">
-          <div class="p-6 text-center">
-            <div class="text-6xl">🐶</div>
-            <p class="mt-2 font-semibold">Your pup’s new favorite human</p>
-            <p class="text-slate-500 text-sm">Replace with your photo later</p>
+      <div class="card p-0 overflow-hidden">
+        <div class="aspect-[4/3] flex items-center justify-center bg-white">
+          <div class="text-center p-8">
+            <div class="text-7xl">🐶</div>
+            <p class="mt-2 font-semibold text-slate-700">Your pup’s new favorite human</p>
+            <p class="text-slate-500 text-sm">Swap in a photo later</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Services -->
-  <section id="services" class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-extrabold">Services & Pricing</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft">
-          <h3 class="font-bold text-lg">Quick Potty Break</h3>
-          <p class="text-slate-600 mt-2">15 minutes • ideal for puppies</p>
-          <p class="mt-4 text-3xl font-extrabold">$15</p>
-        </div>
-        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft">
-          <h3 class="font-bold text-lg">Standard Walk</h3>
-          <p class="text-slate-600 mt-2">30 minutes • most popular</p>
-          <p class="mt-4 text-3xl font-extrabold">$25</p>
-        </div>
-        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft">
-          <h3 class="font-bold text-lg">Sitting / Drop‑In</h3>
-          <p class="text-slate-600 mt-2">45–60 minutes</p>
-          <p class="mt-4 text-3xl font-extrabold">$40</p>
-        </div>
+    <section class="mt-12">
+      <div class="card paper p-8">
+        <h2 class="script text-4xl">Philosophy</h2>
+        <p class="mt-4 text-slate-700">I meet dogs where they are. That means reading body language, going at their pace, and making every visit safe and low‑stress. I’m happy to reinforce training cues you’re working on, and I’ll always communicate clearly about how the day went.</p>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Booking -->
-  <section id="booking" class="py-16 bg-slate-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-extrabold">Live Availability & Booking</h2>
-      <p class="mt-2 text-slate-600">Pick a time that works. Bookings sync with my calendar to prevent double‑booking.</p>
-      <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-2 shadow-soft">
-        <div class="calendly-inline-widget" data-url="https://calendly.com/cwakeland1218/pets?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:760px;"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-extrabold">FAQ</h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
-          <h3 class="font-bold">What areas do you serve?</h3>
-          <p class="text-slate-600 mt-2">Upper Manhattan & nearby. Message me for other neighborhoods.</p>
-        </div>
-        <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
-          <h3 class="font-bold">How do you avoid double‑booking?</h3>
-          <p class="text-slate-600 mt-2">Calendly checks my Google Calendar. If a slot is taken, it disappears automatically.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-16 bg-slate-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-extrabold">Contact</h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <a href="mailto:cwakeland1218@example.com" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft block hover:border-emerald-600">
-          <div class="text-2xl">✉️</div>
-          <p class="mt-2 font-semibold">Email</p>
-          <p class="text-slate-600 text-sm">cwakeland1218@example.com</p>
-        </a>
-        <a href="https://instagram.com/cwakeland1218" target="_blank" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft block hover:border-emerald-600">
-          <div class="text-2xl">📸</div>
-          <p class="mt-2 font-semibold">Instagram</p>
-          <p class="text-slate-600 text-sm">@cwakeland1218</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-10 bg-white border-t border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p>© <span id="year"></span> Chey Walks. All rights reserved.</p>
-      <a href="#booking" class="px-4 py-2 rounded-xl bg-emerald-700 text-white font-semibold hover:bg-emerald-800">Book a walk</a>
+  <footer class="mt-16 border-t border-slate-200 bg-white/70">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-slate-600 flex items-center justify-between">
+      <p>© <span id="year"></span> Chey Walks</p>
+      <a href="/dog_page/book.html" class="px-4 py-2 rounded-xl bg-blue-600 text-white font-semibold">Book a walk</a>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
