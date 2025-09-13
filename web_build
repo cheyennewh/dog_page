@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chey Walks — Dog Walking & Sitting</title>
+<meta name="description" content="Reliable dog walking and sitting in your neighborhood. Transparent pricing, easy online booking, and calendar availability." />
+<!-- Tailwind CSS (CDN) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root { --brand: #0f766e; }
+body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+.shadow-soft { box-shadow: 0 10px 35px rgba(0,0,0,0.07); }
+</style>
+<!-- Cal.com embed (swap data-cal-link below) -->
+<script>
+(function(){
+var d=document,s=d.createElement("script");
+s.src="https://app.cal.com/embed/embed.js"; s.async=true;
+d.head.appendChild(s);
+})();
+</script>
+<!-- JSON-LD for SEO (PetService) -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "PetService",
+"name": "Chey Walks",
+"url": "https://cheyennewh.github.io/YOUR_REPO/",
+"areaServed": "New York City",
+"priceRange": "$",
+"serviceType": ["Dog walking", "Pet sitting"],
+"sameAs": ["https://instagram.com/YOURHANDLE"],
+"telephone": "+1-555-123-4567"
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+<!-- Header -->
+<header class="bg-white/70 backdrop-blur sticky top-0 z-50 border-b border-slate-200">
+<div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+<a href="#" class="font-extrabold text-lg tracking-tight text-slate-900">🐾 Chey Walks</a>
+<nav class="hidden md:flex gap-6 text-sm">
+<a href="#services" class="hover:text-emerald-700">Services</a>
+<a href="#booking" class="hover:text-emerald-700">Booking</a>
+<a href="#faq" class="hover:text-emerald-700">FAQ</a>
+<a href="#contact" class="hover:text-emerald-700">Contact</a>
+</nav>
+<a href="#booking" class="px-3 py-2 rounded-xl bg-emerald-700 text-white text-sm font-semibold shadow-soft hover:bg-emerald-800">Book now</a>
+</div>
+</header>
+
+
+<!-- Hero -->
+<section class="relative overflow-hidden">
+<div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+<div>
+<h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Reliable <span class="text-emerald-700">dog walking</span> & pet sitting</h1>
+<p class="mt-4 text-lg text-slate-600">Flexible, fear‑free handling. Real‑time updates. Easy online booking synced to my live calendar.</p>
+<div class="mt-6 flex gap-3">
+<a href="#booking" class="px-5 py-3 rounded-2xl bg-emerald-700 text-white font-semibold shadow-soft hover:bg-emerald-800">See availability</a>
+<a href="#services" class="px-5 py-3 rounded-2xl bg-white text-slate-900 font-semibold border border-slate-200 hover:border-slate-300">View services</a>
+</div>
+<ul class="mt-6 text-slate-600 text-sm list-disc list-inside">
+<li>Insured & background checked</li>
+<li>Neighborhood coverage: Upper Manhattan & nearby</li>
+<li>Multi‑pet friendly</li>
+</ul>
+</div>
+<div class="relative">
+<div class="aspect-[4/3] rounded-3xl bg-white shadow-soft border border-slate-200 flex items-center justify-center">
+<div class="p-6 text-center">
+<div class="text-6xl">🐶</div>
+<p class="mt-2 font-semibold">Your pup’s new favorite human</p>
+<p class="text-slate-500 text-sm">Replace with your photo later</p>
+</div>
+</div>
+</div>
+</div>
+</html>
